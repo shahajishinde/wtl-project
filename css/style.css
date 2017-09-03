@@ -18,7 +18,7 @@ body{
   z-index: 1000;
   position: fixed;
   left: 250px;
-  width: 0;
+  width: 250px;
   height: 100%;
   overflow-x: auto;
   margin-left: -250px;
@@ -30,7 +30,7 @@ body{
 }
 
 #wrapper.toggled #sidebar-wrapper{
-  width: 250px;
+  width: 0px;
 }
 
 #main-content-wrapper{
@@ -41,7 +41,7 @@ body{
 
 #wrapper.toggled #main-content-wrapper{
   position: absolute;
-  margin-right: -250px;
+  margin-right: 250px;
 }
 
 /*sidebar styles*/
@@ -51,19 +51,20 @@ body{
   list-style: none;
   position: absolute;
   padding: 0;
-  top: 0;
+  top: 50px;
   margin: 0;
 }
 
 .sidebar li{
   text-indent: 20px;
   line-height: 40px;
+  border-bottom: 1px solid #b1b1b1;
 }
 
 .sidebar li a{
   display: block;
   text-decoration: none;
-  color:   #d6d6d6 ;
+  color: #b1b1b1  ;
 }
 
 .sidebar li a:hover{

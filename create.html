@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="validate.js"></script>
   </head>
   <body>
     <!--wrapper-->
@@ -33,26 +34,35 @@
             <div class="row">
               <div class="col-lg-4 col-md-3 .ml-auto"></div>
                 <div class="col-lg-4 col-md-6 .ml-auto">
-                  <form>
-                    <div class="form-group">
+                  <div class="alert alert-success" id="login-error" role="alert" style="display:none">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        <strong>Well done!</strong> You successfully submitted a complaint.
+                  </div>
+                  <form id="compReg" name="compReg" method="post" onsubmit="return validateForm();" enctype=multipart/form-data>
+                  <div class="form-group">
                       <label for="compTitle">Title</label>
-                      <input class="form-control" type="text" id="compTitle" placeholder="Enter title">
-                      <small id="emailHelp" class="form-text text-muted">Keep the title brief and appealing.</small>
-                    </div>
+                      <input class="form-control" type="text" id="compTitle" name="compTitle" placeholder="Enter title">
+                      <small id="titleHelp" class="form-text text-muted">Keep the title brief and appealing.</small>
+                      <small class="form-text" id="titleError" style="color: red"></small>
+                  </div>
                     <div class="form-group">
                       <label for="compDept">Department</label>
-                      <input class="form-control" type="text" id="compDept" placeholder="Enter Department">
+                      <input class="form-control" type="text" id="compDept" name="compDept" placeholder="Enter Department">
+                      <small class="form-text" id="deptError" style="color: red"></small>
                     </div>
                     <div class="form-group">
                       <label for="compDesc">Description</label>
-                      <textarea class="form-control" id="exampleTextarea" rows="4"></textarea>
+                      <textarea class="form-control" id="compDesc" name="compDesc" rows="4"></textarea>
+                      <small class="form-text" id="descError" style="color: red"></small>
                     </div>
                     <div class="form-group">
                       <label for="compFile">File input</label>
-                      <input type="file" class="form-control-file" id="compFile" aria-describedby="fileHelp">
+                      <input type="file" class="form-control-file" id="compFile" name="compFile" aria-describedby="fileHelp">
                       <!--<small id="fileHelp" class="form-text text-muted">Upload a file if necessary or you are good to go anyways.</small>-->
                     </div>
-                     <button type="submit" class="btn btn-outline-success btn-block">Submit</button>
+                     <button type="submit" name="sub" class="btn btn-outline-success btn-block">Submit</button>
                   </form>
                 </div>
             </div>

@@ -58,7 +58,7 @@ body{
 .sidebar li{
   text-indent: 20px;
   line-height: 40px;
-  border-bottom: 1px solid #f05f40;
+/*  border-bottom: 1px solid #f05f40;*/
 }
 
 .sidebar li a{
@@ -76,9 +76,10 @@ body{
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
   text-decoration: none;
   color: #fff;
+  background-color:  #102843;
 }
 
-/*top nav bar styles*/
+/*toggle-btn styles*/
 .toggle-btn{
   border-radius: 0 !important;
   padding: 8px 13px;
@@ -86,6 +87,7 @@ body{
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  position: fixed;
   background: #fff;
 }
 
@@ -93,6 +95,12 @@ body{
   outline: 0 none;
 }
 
+/*complaint cards style*/
+
+.compCards{
+  padding: 50px;
+  position: relative;
+}
 #headline{
   text-align: center;
 }
